@@ -61,8 +61,28 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   'Viaje': '✈️',
 };
 
-// Location links from lugares.md
+// Location links from lugares.md and transportes.md
 const LOCATIONS: Record<string, string> = {
+  // === TRANSPORTES ===
+  'aeropuerto juan santamaría': 'https://www.google.com/maps/search/?api=1&query=Juan+Santamaria+International+Airport+Costa+Rica',
+  'llegada al aeropuerto': 'https://www.google.com/maps/search/?api=1&query=Juan+Santamaria+International+Airport+Costa+Rica',
+  '✈️ salida 7:40 pm': 'https://www.google.com/maps/search/?api=1&query=Juan+Santamaria+International+Airport+Costa+Rica',
+  'aeropuerto madrid-barajas': 'https://www.google.com/maps/search/?api=1&query=Madrid+Barajas+Airport',
+  '✈️ llegada 1:55 pm': 'https://www.google.com/maps/search/?api=1&query=Madrid+Barajas+Airport',
+  '✈️ vuelo madrid → florencia ~9-10am': 'https://www.google.com/maps/search/?api=1&query=Madrid+Barajas+Airport',
+  'firenze santa maria novella': 'https://www.google.com/maps/search/?api=1&query=Firenze+Santa+Maria+Novella',
+  '🚆 tren florencia → milán': 'https://www.google.com/maps/search/?api=1&query=Firenze+Santa+Maria+Novella',
+  'milano centrale': 'https://www.google.com/maps/search/?api=1&query=Milano+Centrale+Station',
+  '🚆 tren milán → zúrich': 'https://www.google.com/maps/search/?api=1&query=Milano+Centrale+Station',
+  'aeropuerto de zúrich': 'https://www.google.com/maps/search/?api=1&query=Zurich+Airport',
+  '✈️ vuelo zúrich → bruselas ~9-10am': 'https://www.google.com/maps/search/?api=1&query=Zurich+Airport',
+  'bruxelles-midi': 'https://www.google.com/maps/search/?api=1&query=Brussels+Midi+Station',
+  '🚆 tren bruselas → parís': 'https://www.google.com/maps/search/?api=1&query=Brussels+Midi+Station',
+  'aeropuerto charles de gaulle': 'https://www.google.com/maps/search/?api=1&query=Charles+de+Gaulle+Airport',
+  '✈️ vuelo parís → madrid ~9-10am': 'https://www.google.com/maps/search/?api=1&query=Charles+de+Gaulle+Airport',
+  '✈️ salida 3:25 pm': 'https://www.google.com/maps/search/?api=1&query=Madrid+Barajas+Airport',
+  '✈️ llegada 6:15 pm': 'https://www.google.com/maps/search/?api=1&query=Juan+Santamaria+International+Airport+Costa+Rica',
+  // === LUGARES ===
   'gran vía': 'https://www.google.com/maps/search/?api=1&query=Gran+Via+Madrid',
   'galería de la academia': 'https://www.google.com/maps/search/?api=1&query=Galleria+dell+Accademia+Firenze',
   'jardines de boboli': 'https://www.google.com/maps/search/?api=1&query=Giardino+di+Boboli+Firenze',
