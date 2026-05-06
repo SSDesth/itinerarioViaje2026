@@ -163,7 +163,10 @@ export const ITINERARY: DayData[] = [
     city: 'Florencia',
     activities: [
       act('🏨 Check-in', 'Logística', '🌆 Tarde', ALL, 'Florencia'),
-      act('Paseo inicial por Florencia', 'Relax', '🌆 Tarde', ALL, 'Florencia'),
+      act('Galería de la Academia', 'Cultural', '🌆 Tarde', ['Sharon', 'Carlos', 'Hayley', 'Giselle', 'Jimena'], 'Florencia'),
+      act('Museo Leonardo Da Vinci', 'Cultural', '🌆 Tarde', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'Florencia'),
+      act('Jardines de Boboli y Palazzo Pitti', 'Cultural', '🌆 Tarde', ALL, 'Florencia'),
+      act('Paseos + museos', 'Relax', '🌙 Noche', ALL, 'Florencia'),
     ],
     hotel: HOTELS[1],
     optionalActivities: FLORENCE_OPTIONS,
@@ -175,10 +178,7 @@ export const ITINERARY: DayData[] = [
     country: 'Italia',
     city: 'Florencia',
     activities: [
-      act('Galería de la Academia', 'Cultural', '☀️ Mañana', ['Sharon', 'Carlos', 'Hayley', 'Giselle', 'Jimena'], 'Florencia'),
-      act('Museo Leonardo Da Vinci', 'Cultural', '☀️ Mañana', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'Florencia'),
-      act('Jardines de Boboli y Palazzo Pitti', 'Cultural', '🌆 Tarde', ALL, 'Florencia'),
-      act('Tour de Cinque Terre', 'Imperdible', '☀️ Día', ALL, 'Florencia', 'Día flexible - opción 1'),
+      act('Tour de Cinque Terre', 'Imperdible', '☀️ Día', ALL, 'Florencia', 'Día completo'),
     ],
     hotel: HOTELS[1],
     optionalActivities: FLORENCE_OPTIONS,
@@ -204,7 +204,6 @@ export const ITINERARY: DayData[] = [
     activities: [
       act('🎂 Cumpleaños mamá', 'Imperdible', '☀️ Día', ALL, 'Florencia', '¡Celebración!'),
       act('Tour por la Toscana', 'Imperdible', '☀️ Día', ALL, 'Florencia', 'San Gimignano, Monteriggioni'),
-      act('Paseos + museos', 'Relax', '🌆 Tarde', ALL, 'Florencia'),
       act('Cena bistecca', 'Imperdible', '🌙 Noche', ALL, 'Florencia', 'Cena especial'),
     ],
     hotel: HOTELS[1],

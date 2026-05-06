@@ -51,7 +51,7 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1>🌍 Europa 2025</h1>
+          <h1>🌍 Eurotrip 2026</h1>
           <p className="subtitle">Itinerario de viaje • 2 - 20 junio</p>
           <div className="route-badges">
             {['España', 'Italia', 'Suiza', 'Bélgica', 'Francia'].map((c) => (
