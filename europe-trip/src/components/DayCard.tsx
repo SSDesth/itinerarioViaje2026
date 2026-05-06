@@ -10,7 +10,7 @@ interface DayCardProps {
 }
 
 export default function DayCard({ day, selectedPerson }: DayCardProps) {
-  const [isExpanded, setIsExpanded] = useState(true)
+  const [isExpanded, setIsExpanded] = useState(false)
   const [showOptional, setShowOptional] = useState(false)
   const colors = COUNTRY_COLORS[day.country] || COUNTRY_COLORS['Viaje']
   const flag = COUNTRY_FLAGS[day.country] || '✈️'

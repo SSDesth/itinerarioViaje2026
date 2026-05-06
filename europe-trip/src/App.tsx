@@ -15,7 +15,7 @@ function App() {
     return ['Todos', ...Array.from(set)]
   }, [])
 
-  const types = ['Todos', 'Imperdible', 'Cultural', 'Relax', 'Logística', 'Compras']
+  const types = ['Todos', 'Imperdible', 'Cultural', 'Relax', 'Logística', 'Hotel', 'Compras']
 
   const filteredDays = useMemo(() => {
     return ITINERARY.filter((day) => {
@@ -30,10 +30,14 @@ function App() {
         if (!hasActivity && !hasOptional) return false
       }
       if (selectedType !== 'Todos') {
-        const hasType = day.activities.some((a) =>
-          a.type.toLowerCase().includes(selectedType.toLowerCase())
-        )
-        if (!hasType) return false
+        if (selectedType === 'Hotel') {
+          if (!day.hotel) return false
+        } else {
+          const hasType = day.activities.some((a) =>
+            a.type.toLowerCase().includes(selectedType.toLowerCase())
+          )
+          if (!hasType) return false
+        }
       }
       return true
     })

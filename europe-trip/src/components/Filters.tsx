@@ -102,7 +102,7 @@ export default function Filters({
                     className={`chip ${selectedType === t ? 'active' : ''}`}
                     onClick={() => setSelectedType(t)}
                   >
-                    {t === 'Imperdible' ? '🔥' : t === 'Cultural' ? '🏛️' : t === 'Relax' ? '😎' : t === 'Logística' ? '🎯' : t === 'Compras' ? '🛍️' : '📋'} {t}
+                    {t === 'Imperdible' ? '🔥' : t === 'Cultural' ? '🏛️' : t === 'Relax' ? '😎' : t === 'Logística' ? '🎯' : t === 'Hotel' ? '🏨' : t === 'Compras' ? '🛍️' : '📋'} {t}
                   </button>
                 ))}
               </div>
