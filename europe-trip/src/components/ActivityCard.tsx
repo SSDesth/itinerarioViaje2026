@@ -53,15 +53,17 @@ export default function ActivityCard({ activity, colors, isOptional }: ActivityC
           )}
         </div>
 
-        <a
-          href={activity.mapsLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="maps-btn"
-          aria-label={`Abrir ${activity.name} en Google Maps`}
-        >
-          📍 Abrir en Maps
-        </a>
+        {activity.mapsLink && (
+          <a
+            href={activity.mapsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="maps-btn"
+            aria-label={`Abrir ${activity.name} en Google Maps`}
+          >
+            📍 Abrir en Maps
+          </a>
+        )}
       </div>
     </motion.div>
   )

@@ -7,7 +7,7 @@ export interface Activity {
   notes: string;
   participants: string[];
   isOptional: boolean;
-  mapsLink: string;
+  mapsLink: string | null;
   icon: string;
 }
 
@@ -175,7 +175,7 @@ const LOCATIONS: Record<string, string> = {
   'excursión brujas': 'https://www.google.com/maps/search/?api=1&query=Bruges+Belgium',
 };
 
-export function getLocationLink(activityName: string, city: string): string {
+export function getLocationLink(activityName: string, _city: string): string | null {
   const normalized = activityName
     .toLowerCase()
     .replace(/\[opción\]/g, '')
@@ -193,9 +193,8 @@ export function getLocationLink(activityName: string, city: string): string {
     }
   }
 
-  // Fallback
-  const query = encodeURIComponent(`${activityName} ${city}`);
-  return `https://www.google.com/maps/search/?api=1&query=${query}`;
+  // No match found in lugares.md — don't show location button
+  return null;
 }
 
 // Hotels data from hospedajes.md
@@ -238,37 +237,3 @@ export const HOTELS: Hotel[] = [
   },
 ];
 
-function getHotelForDay(date: string): Hotel | null {
-  const hotelRanges: { hotel: Hotel; start: number; end: number }[] = [
-    { hotel: HOTELS[0], start: 3, end: 4 },
-    { hotel: HOTELS[1], start: 4, end: 8 },
-    { hotel: HOTELS[2], start: 8, end: 11 },
-    { hotel: HOTELS[3], start: 11, end: 13 },
-    { hotel: HOTELS[4], start: 13, end: 16 },
-    { hotel: HOTELS[5], start: 16, end: 20 },
-  ];
-
-  const dayNum = parseInt(date.split(' ')[0]);
-  const found = hotelRanges.find((r) => dayNum >= r.start && dayNum < r.end);
-  return found ? found.hotel : null;
-}
-
-function getIconForType(type: string): string {
-  if (type.includes('Logística')) return '🎯';
-  if (type.includes('Imperdible')) return '🔥';
-  if (type.includes('Por definir')) return '❓';
-  if (type.includes('Relax')) return '😎';
-  if (type.includes('Tip')) return '💡';
-  return '📌';
-}
-
-function getCountryFromRaw(raw: string): string {
-  if (raw.includes('Costa Rica')) return 'Costa Rica';
-  if (raw.includes('España')) return 'España';
-  if (raw.includes('Italia')) return 'Italia';
-  if (raw.includes('Suiza')) return 'Suiza';
-  if (raw.includes('Bélgica')) return 'Bélgica';
-  if (raw.includes('Francia')) return 'Francia';
-  if (raw.includes('Viaje')) return 'Viaje';
-  return 'Viaje';
-}
