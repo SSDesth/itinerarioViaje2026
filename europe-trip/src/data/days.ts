@@ -277,7 +277,8 @@ export const ITINERARY: DayData[] = [
     activities: [
       act('🚆 Tren Bruselas → París', 'Logística', '☀️ Mañana', ALL, 'París', 'Tren ~1.5h, llegada ~12pm'),
       act('🏨 Check-in', 'Logística', '🌆 Tarde', ALL, 'París'),
-      act('Sainte Chapelle', 'Imperdible', '🌆 Tarde', ALL, 'París', 'Aprovechar la tarde larga'),
+      act('Notre Dame', 'Imperdible', '🌆 Tarde', ALL, 'París', 'Todos juntos'),
+      act('Sainte Chapelle', 'Imperdible', '🌆 Tarde', ALL, 'París', 'Está al lado de Notre Dame'),
       act('Torre Eiffel al atardecer', 'Imperdible', '🌆 Tarde-Noche', ALL, 'París', 'Atardecer ~21:30 en junio'),
       act('Tour por el Río Sena', 'Relax', '🌙 Noche', ALL, 'París', 'Oscurece tarde, aprovechar'),
     ],
@@ -292,8 +293,7 @@ export const ITINERARY: DayData[] = [
     city: 'París',
     activities: [
       act('Disney', 'Imperdible', '☀️ Día completo', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París', 'Día completo en Disney'),
-      act('Notre Dame', 'Imperdible', '☀️ Mañana', ['Sharon', 'Hayley', 'Jimena', 'Giselle'], 'París'),
-      act('Palacio de Versalles', 'Imperdible', '🌆 Tarde', ['Sharon', 'Hayley', 'Jimena', 'Giselle'], 'París'),
+      act('Palacio de Versalles', 'Imperdible', '☀️ Día', ['Sharon', 'Hayley', 'Jimena', 'Giselle'], 'París'),
       act('Crucero por el Río Sena de noche', 'Imperdible', '🌙 Noche', ALL, 'París', 'Reunión de todos al final del día'),
     ],
     hotel: HOTELS[4],
@@ -308,7 +308,6 @@ export const ITINERARY: DayData[] = [
     activities: [
       act('Disney', 'Imperdible', '☀️ Día completo', ['Jimena', 'Hayley'], 'París', 'Día completo en Disney'),
       act('Catacumbas', 'Cultural', '☀️ Mañana', ['Ivania', 'Jonathan', 'Jurgen', 'Sharon', 'Carlos'], 'París'),
-      act('Notre Dame', 'Imperdible', '☀️ Mañana', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos', 'Giselle'], 'París', 'Para quienes no fueron el domingo'),
       act('Musee des Arts et Métiers', 'Cultural', '🌆 Tarde', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París'),
       act('Museum d\'histoire naturelle', 'Cultural', '🌆 Tarde', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París'),
       act('Louvre', 'Cultural', '🌙 Noche', ['Carlos'], 'París', 'Tarde-noche antes de cerrar'),
