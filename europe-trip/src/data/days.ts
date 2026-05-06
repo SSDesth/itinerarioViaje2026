@@ -246,7 +246,7 @@ export const ITINERARY: DayData[] = [
     hotel: HOTELS[3],
     optionalActivities: BRUGES_OPTIONS,
   },
-  // June 13 - Brussels → Paris
+  // June 13 - Brussels → Paris (arrival - late afternoon/evening available)
   {
     date: '13 junio',
     dayOfWeek: 'Sábado',
@@ -254,41 +254,43 @@ export const ITINERARY: DayData[] = [
     city: 'Bruselas → París',
     activities: [
       act('Traslado Bruselas → París', 'Logística', '☀️ Día', ALL, 'París', '⚠️ Validar hora - avión o tren'),
-      act('Torre Eiffel al atardecer', 'Imperdible', '🌆 Tarde', ALL, 'París'),
-      act('Tour por el Río Sena', 'Relax', '🌆 Tarde', ALL, 'París'),
-      act('🏨 Llegada hotel', 'Logística', '🌙 Noche', ALL, 'París'),
+      act('🏨 Check-in', 'Logística', '🌆 Tarde', ALL, 'París'),
+      act('Torre Eiffel al atardecer', 'Imperdible', '🌆 Tarde', ALL, 'París', 'Atardecer ~21:30 en junio'),
+      act('Tour por el Río Sena', 'Relax', '🌙 Noche', ALL, 'París', 'Oscurece tarde, aprovechar'),
     ],
     hotel: HOTELS[4],
     optionalActivities: PARIS_OPTIONS,
   },
-  // June 14 - Paris day 1
+  // June 14 - Paris day 1 (Sunday) - Disney group 1
   {
     date: '14 junio',
     dayOfWeek: 'Domingo',
     country: 'Francia',
     city: 'París',
     activities: [
-      act('Notre Dame', 'Imperdible', '☀️ Mañana', ALL, 'París'),
-      act('Sainte Chapelle', 'Imperdible', '☀️ Mañana', ALL, 'París'),
-      act('Catacumbas', 'Cultural', '🌆 Tarde', ['Ivania', 'Jonathan', 'Jurgen', 'Sharon', 'Carlos'], 'París'),
-      act('Palacio de Versalles', 'Imperdible', '☀️ Día', ALL, 'París'),
-      act('Crucero por el Río Sena de noche', 'Imperdible', '🌙 Noche', ALL, 'París'),
+      act('Disney', 'Imperdible', '☀️ Día completo', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París', 'Día completo en Disney'),
+      act('Notre Dame', 'Imperdible', '☀️ Mañana', ['Sharon', 'Hayley', 'Jimena', 'Giselle'], 'París'),
+      act('Sainte Chapelle', 'Imperdible', '☀️ Mañana', ['Sharon', 'Hayley', 'Jimena', 'Giselle'], 'París'),
+      act('Palacio de Versalles', 'Imperdible', '🌆 Tarde', ['Sharon', 'Hayley', 'Jimena', 'Giselle'], 'París'),
+      act('Crucero por el Río Sena de noche', 'Imperdible', '🌙 Noche', ALL, 'París', 'Reunión de todos al final del día'),
     ],
     hotel: HOTELS[4],
     optionalActivities: PARIS_OPTIONS,
   },
-  // June 15 - Paris day 2
+  // June 15 - Paris day 2 (Monday) - Disney group 2
   {
     date: '15 junio',
     dayOfWeek: 'Lunes',
     country: 'Francia',
     city: 'París',
     activities: [
-      act('Disney', 'Imperdible', '☀️ Día', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París', 'Día 1 Disney'),
-      act('Musee des Arts et Métiers', 'Cultural', '☀️ Mañana', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París'),
+      act('Disney', 'Imperdible', '☀️ Día completo', ['Jimena', 'Hayley'], 'París', 'Día completo en Disney'),
+      act('Catacumbas', 'Cultural', '☀️ Mañana', ['Ivania', 'Jonathan', 'Jurgen', 'Sharon', 'Carlos'], 'París'),
+      act('Musee des Arts et Métiers', 'Cultural', '🌆 Tarde', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París'),
       act('Museum d\'histoire naturelle', 'Cultural', '🌆 Tarde', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París'),
       act('Louvre', 'Cultural', '🌙 Noche', ['Carlos'], 'París', 'Tarde-noche antes de cerrar'),
-      act('Disney', 'Imperdible', '☀️ Día', ['Jimena', 'Hayley'], 'París', 'Día 2 Disney'),
+      act('Notre Dame', 'Imperdible', '☀️ Mañana', ['Ivania', 'Jonathan', 'Jurgen', 'Sharon', 'Carlos', 'Giselle'], 'París', 'Para quienes no fueron el domingo'),
+      act('Sainte Chapelle', 'Cultural', '☀️ Mañana', ['Ivania', 'Jonathan', 'Jurgen', 'Sharon', 'Carlos', 'Giselle'], 'París', 'Para quienes no fueron el domingo'),
       act('Merci Store- souvenirs', 'Compras', 'Flexible', ALL, 'París'),
       act('Au Singe Qui Lit- souvenirs', 'Compras', 'Flexible', ALL, 'París'),
     ],
