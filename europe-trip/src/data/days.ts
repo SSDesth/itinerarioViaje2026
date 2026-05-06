@@ -148,7 +148,7 @@ export const ITINERARY: DayData[] = [
   {
     date: '04 junio',
     dayOfWeek: 'Jueves',
-    country: 'Italia',
+    country: 'Viaje',
     city: 'Madrid → Florencia',
     activities: [
       act('✈️ Vuelo Madrid → Florencia ~9-10am', 'Logística', '☀️ Mañana', ALL, 'Florencia', 'Llegada ~12pm hora local'),
@@ -204,7 +204,7 @@ export const ITINERARY: DayData[] = [
   {
     date: '08 junio',
     dayOfWeek: 'Lunes',
-    country: 'Suiza',
+    country: 'Viaje',
     city: 'Florencia → Milán → Zúrich',
     activities: [
       act('🚆 Tren Florencia → Milán', 'Logística', '☀️ Mañana', ALL, 'Milán', 'Salida ~9am'),
@@ -245,7 +245,7 @@ export const ITINERARY: DayData[] = [
   {
     date: '11 junio',
     dayOfWeek: 'Jueves',
-    country: 'Bélgica',
+    country: 'Viaje',
     city: 'Zúrich → Bruselas',
     activities: [
       act('✈️ Vuelo Zúrich → Bruselas ~9-10am', 'Logística', '☀️ Mañana', ALL, 'Bruselas', 'Llegada ~11am'),
@@ -272,7 +272,7 @@ export const ITINERARY: DayData[] = [
   {
     date: '13 junio',
     dayOfWeek: 'Sábado',
-    country: 'Francia',
+    country: 'Viaje',
     city: 'Bruselas → París',
     activities: [
       act('🚆 Tren Bruselas → París', 'Logística', '☀️ Mañana', ALL, 'París', 'Tren ~1.5h, llegada ~12pm'),
@@ -321,7 +321,7 @@ export const ITINERARY: DayData[] = [
   {
     date: '16 junio',
     dayOfWeek: 'Martes',
-    country: 'España',
+    country: 'Viaje',
     city: 'París → Madrid',
     activities: [
       act('✈️ Vuelo París → Madrid ~9-10am', 'Logística', '☀️ Mañana', ALL, 'Madrid', 'Llegada ~11am'),
