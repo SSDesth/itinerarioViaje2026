@@ -122,8 +122,8 @@ export const ITINERARY: DayData[] = [
     country: 'Viaje',
     city: 'San José → Madrid',
     activities: [
-      act('Llegada al aeropuerto', 'Logística', '🌆 Tarde', ALL, 'San José', 'Inicio del viaje'),
-      act('✈️ Salida 7:40 pm', 'Logística', '🌙 Noche', ALL, 'San José', 'Vuelo a Madrid'),
+      act('Llegada al aeropuerto', 'Logística', '🌆 Tarde', ALL, 'San José', 'Aeropuerto Juan Santamaría'),
+      act('✈️ Salida 7:40 pm', 'Logística', '🌙 Noche', ALL, 'San José', 'Vuelo internacional a Madrid'),
     ],
     hotel: null,
     optionalActivities: [],
@@ -135,7 +135,7 @@ export const ITINERARY: DayData[] = [
     country: 'España',
     city: 'Madrid',
     activities: [
-      act('✈️ Llegada 1:55 pm', 'Logística', '🌆 Tarde', ALL, 'Madrid', 'Hora local'),
+      act('✈️ Llegada 9:45 am', 'Logística', '☀️ Mañana', ALL, 'Madrid', 'Aeropuerto Madrid-Barajas'),
       act('🏨 Check-in + maletas', 'Logística', '🌆 Tarde', ALL, 'Madrid'),
       act('Tinto de verano en Gran Vía', 'Relax', '🌆 Tarde', ALL, 'Madrid'),
       act('Paseo Gran Vía', 'Relax', '🌙 Noche', ALL, 'Madrid'),
@@ -144,14 +144,14 @@ export const ITINERARY: DayData[] = [
     hotel: HOTELS[0],
     optionalActivities: [],
   },
-  // June 4 - Madrid → Florence (flight ~9-10am, arrive ~12pm)
+  // June 4 - Madrid → Florence
   {
     date: '04 junio',
     dayOfWeek: 'Jueves',
     country: 'Viaje',
     city: 'Madrid → Florencia',
     activities: [
-      act('✈️ Vuelo Madrid → Florencia ~9-10am', 'Logística', '☀️ Mañana', ALL, 'Florencia', 'Llegada ~12pm hora local'),
+      act('✈️ Vuelo Madrid → Florencia', 'Logística', '☀️ Mañana', ALL, 'Florencia', 'Salida desde Madrid-Barajas'),
     ],
     hotel: null,
     optionalActivities: TRAVEL_OPTIONS_MADRID_FLORENCE,
@@ -216,8 +216,8 @@ export const ITINERARY: DayData[] = [
     country: 'Viaje',
     city: 'Florencia → Milán → Zúrich',
     activities: [
-      act('🚆 Tren Florencia → Milán', 'Logística', '☀️ Mañana', ALL, 'Milán', 'Salida ~9am'),
-      act('Gelato en estación de Milán', 'Relax', '☀️ Parada', ALL, 'Milán', 'Parada rápida entre trenes'),
+      act('🚆 Tren Florencia → Milán 11:16 am', 'Logística', '☀️ Mañana', ALL, 'Milán', 'Estación Firenze Santa Maria Novella'),
+      act('Gelato en estación de Milán', 'Relax', '☀️ Parada', ALL, 'Milán', 'Escala en Milano Centrale'),
       act('🚆 Tren Milán → Zúrich', 'Logística', '🌆 Tarde', ALL, 'Zúrich', '~3.5h de viaje'),
     ],
     hotel: null,
@@ -260,14 +260,14 @@ export const ITINERARY: DayData[] = [
     hotel: HOTELS[2],
     optionalActivities: ZURICH_OPTIONS,
   },
-  // June 11 - Zurich → Brussels (flight ~9-10am)
+  // June 11 - Zurich → Brussels (flight)
   {
     date: '11 junio',
     dayOfWeek: 'Jueves',
     country: 'Viaje',
     city: 'Zúrich → Bruselas',
     activities: [
-      act('✈️ Vuelo Zúrich → Bruselas ~9-10am', 'Logística', '☀️ Mañana', ALL, 'Bruselas', 'Llegada ~11am'),
+      act('✈️ Vuelo Zúrich → Bruselas 10:20 am', 'Logística', '☀️ Mañana', ALL, 'Bruselas', 'Salida desde Aeropuerto de Zúrich'),
     ],
     hotel: null,
     optionalActivities: TRAVEL_OPTIONS_ZURICH_BRUSSELS,
@@ -297,14 +297,14 @@ export const ITINERARY: DayData[] = [
     hotel: HOTELS[3],
     optionalActivities: BRUGES_OPTIONS,
   },
-  // June 13 - Brussels → Paris (TRAIN ~1.5h)
+  // June 13 - Brussels → Paris (TRAIN)
   {
     date: '13 junio',
     dayOfWeek: 'Sábado',
     country: 'Viaje',
     city: 'Bruselas → París',
     activities: [
-      act('🚆 Tren Bruselas → París', 'Logística', '☀️ Mañana', ALL, 'París', 'Tren ~1.5h, llegada ~12pm'),
+      act('🚆 Tren Bruselas → París 12:58 pm', 'Logística', '🌆 Tarde', ALL, 'París', 'Salida desde Estación Central de Bruselas'),
     ],
     hotel: null,
     optionalActivities: TRAVEL_OPTIONS_BRUSSELS_PARIS,
@@ -356,14 +356,14 @@ export const ITINERARY: DayData[] = [
     hotel: HOTELS[4],
     optionalActivities: PARIS_OPTIONS,
   },
-  // June 16 - Paris → Spain (flight ~9-10am)
+  // June 16 - Paris → Spain (flight)
   {
     date: '16 junio',
     dayOfWeek: 'Martes',
     country: 'Viaje',
     city: 'París → Madrid',
     activities: [
-      act('✈️ Vuelo París → Madrid ~9-10am', 'Logística', '☀️ Mañana', ALL, 'Madrid', 'Llegada ~11am'),
+      act('✈️ Vuelo París → Madrid 1:36 pm', 'Logística', '🌆 Tarde', ALL, 'Madrid', 'Salida desde París-Orly'),
     ],
     hotel: null,
     optionalActivities: TRAVEL_OPTIONS_PARIS_SPAIN,
@@ -428,8 +428,8 @@ export const ITINERARY: DayData[] = [
     country: 'Viaje',
     city: 'Madrid → San José',
     activities: [
-      act('✈️ Salida 3:25 pm', 'Logística', '🌆 Tarde', ALL, 'Madrid'),
-      act('✈️ Llegada 6:15 pm', 'Logística', '🌙 Noche', ALL, 'San José', 'Fin del viaje 🎉'),
+      act('✈️ Salida 3:25 pm', 'Logística', '🌆 Tarde', ALL, 'Madrid', 'Aeropuerto Madrid-Barajas'),
+      act('✈️ Llegada 6:15 pm', 'Logística', '🌙 Noche', ALL, 'San José', 'Aeropuerto Juan Santamaría • Fin del viaje 🎉'),
     ],
     hotel: null,
     optionalActivities: [],

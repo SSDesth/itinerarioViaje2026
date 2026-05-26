@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { DayData, COUNTRY_COLORS, COUNTRY_FLAGS, Participant } from '../data/itinerary'
 import ActivityCard from './ActivityCard'
 import HotelCard from './HotelCard'
+import TransportCard from './TransportCard'
 
 interface DayCardProps {
   day: DayData
@@ -72,7 +73,11 @@ export default function DayCard({ day, selectedPerson }: DayCardProps) {
 
             <div className="activities-list">
               {filteredActivities.map((activity, i) => (
-                <ActivityCard key={`${activity.name}-${i}`} activity={activity} colors={colors} />
+                day.country === 'Viaje' ? (
+                  <TransportCard key={`${activity.name}-${i}`} activity={activity} />
+                ) : (
+                  <ActivityCard key={`${activity.name}-${i}`} activity={activity} colors={colors} />
+                )
               ))}
             </div>
 
