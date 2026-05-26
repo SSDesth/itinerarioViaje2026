@@ -30,8 +30,12 @@ function act(
   };
 }
 
-// Optional activities for each city
+// Optional activities for each city (from word.md [opción])
 const FLORENCE_OPTIONS: Activity[] = [
+  act('Galería de la Academia', 'Cultural', 'Flexible', ['Sharon', 'Carlos', 'Hayley', 'Giselle', 'Jimena'], 'Florencia', '', true),
+  act('Jardines de Boboli y Palazzo Pitti', 'Cultural', 'Flexible', ALL, 'Florencia', '', true),
+  act('Museo Leonardo Da Vinci', 'Cultural', 'Flexible', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'Florencia', '', true),
+  act('Museo casa de Nicolás Maquiavelo', 'Cultural', 'Flexible', ALL, 'Florencia', 'Próximo al Palazzo Pitti', true),
   act('Catedral Santa María del Fiore', 'Cultural', 'Flexible', ALL, 'Florencia', '', true),
   act('Ponte Vecchio', 'Cultural', 'Flexible', ALL, 'Florencia', '', true),
   act('Piazza del Duomo', 'Cultural', 'Flexible', ALL, 'Florencia', '', true),
@@ -43,10 +47,10 @@ const FLORENCE_OPTIONS: Activity[] = [
   act('Signum- souvenirs', 'Compras', 'Flexible', ALL, 'Florencia', '', true),
   act('Museo di Casa Martinelli', 'Cultural', 'Flexible', ALL, 'Florencia', '', true),
   act('Fotoautomatica', 'Diversión', 'Flexible', ALL, 'Florencia', '', true),
-  act('Museo casa de Nicolás Maquiavelo', 'Cultural', 'Flexible', ALL, 'Florencia', 'Próximo al Palazzo Pitti', true),
 ];
 
 const ZURICH_OPTIONS: Activity[] = [
+  act('Museo Lindt Hogar del Chocolate', 'Cultural', 'Flexible', ALL, 'Zúrich', '', true),
   act('Altstadt', 'Cultural', 'Flexible', ALL, 'Zúrich', 'Casco antiguo', true),
   act('Mirador Lindenhof', 'Cultural', 'Flexible', ALL, 'Zúrich', '', true),
   act('Crucero por el lago', 'Relax', 'Flexible', ALL, 'Zúrich', '', true),
@@ -60,6 +64,8 @@ const ZURICH_OPTIONS: Activity[] = [
 ];
 
 const BRUSSELS_OPTIONS: Activity[] = [
+  act('Noria de Bruselas', 'Cultural', 'Flexible', ALL, 'Bruselas', '', true),
+  act('Atomium', 'Cultural', 'Flexible', ALL, 'Bruselas', 'Solo ver por fuera', true),
   act('Mini Europa', 'Cultural', 'Flexible', ALL, 'Bruselas', '', true),
   act('Museo de los Globos', 'Cultural', 'Flexible', ALL, 'Bruselas', '', true),
   act('Gran Plaza', 'Cultural', 'Flexible', ALL, 'Bruselas', '', true),
@@ -80,15 +86,31 @@ const BRUGES_OPTIONS: Activity[] = [
 ];
 
 const PARIS_OPTIONS: Activity[] = [
+  act('Musee des Arts et Métiers', 'Cultural', 'Flexible', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París', '', true),
+  act('Palacio de Versalles', 'Cultural', 'Flexible', ALL, 'París', '', true),
+  act('Museum d\'histoire naturelle', 'Cultural', 'Flexible', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París', '', true),
   act('Jardines de Luxemburgo', 'Cultural', 'Flexible', ALL, 'París', '', true),
   act('Montmatre', 'Cultural', 'Flexible', ALL, 'París', '', true),
   act('Petit Palais', 'Cultural', 'Flexible', ALL, 'París', '', true),
   act('La Rue de la Universite', 'Fotos', 'Flexible', ALL, 'París', 'Fotos', true),
   act('La Rue de Buenos Aires', 'Fotos', 'Flexible', ALL, 'París', 'Fotos', true),
   act('Champ de Mars', 'Fotos', 'Flexible', ALL, 'París', 'Fotos', true),
+  act('Merci Store- souvenirs', 'Compras', 'Flexible', ALL, 'París', '', true),
+  act('Au Singe Qui Lit- souvenirs', 'Compras', 'Flexible', ALL, 'París', '', true),
 ];
 
-const SPAIN2_OPTIONS: Activity[] = [
+const MADRID2_OPTIONS: Activity[] = [
+  act('Museo del Prado', 'Cultural', 'Flexible', ['Sharon', 'Carlos'], 'Madrid', '', true),
+  act('Estadio del Real Madrid', 'Cultural', 'Flexible', ['Jonathan', 'Jurgen'], 'Madrid', '', true),
+  act('Plaza Mayor', 'Cultural', 'Flexible', ALL, 'Madrid', '', true),
+];
+
+const BARCELONA_OPTIONS: Activity[] = [
+  act('Estadio del Barca', 'Cultural', 'Flexible', ['Jonathan', 'Jurgen'], 'Barcelona', 'De 2 a 4 personas', true),
+  act('Sagrada Familia', 'Cultural', 'Flexible', ['Ivania', 'Jonathan', 'Jurgen', 'Sharon', 'Carlos'], 'Barcelona', '', true),
+];
+
+const TOLEDO_OPTIONS: Activity[] = [
   act('Alcázar de Toledo', 'Cultural', 'Flexible', ALL, 'Toledo', '', true),
   act('Catedral de Toledo', 'Cultural', 'Flexible', ALL, 'Toledo', '', true),
 ];
@@ -115,7 +137,7 @@ const TRAVEL_OPTIONS_PARIS_SPAIN: Activity[] = [
 ];
 
 export const ITINERARY: DayData[] = [
-  // June 2 - Costa Rica / Departure
+  // ===== 02 JUNIO - SALIDA =====
   {
     date: '02 junio',
     dayOfWeek: 'Martes',
@@ -128,7 +150,7 @@ export const ITINERARY: DayData[] = [
     hotel: null,
     optionalActivities: [],
   },
-  // June 3 - Madrid arrival
+  // ===== 03 JUNIO - ESPAÑA (Madrid) =====
   {
     date: '03 junio',
     dayOfWeek: 'Miércoles',
@@ -136,15 +158,15 @@ export const ITINERARY: DayData[] = [
     city: 'Madrid',
     activities: [
       act('✈️ Llegada 9:45 am', 'Logística', '☀️ Mañana', ALL, 'Madrid', 'Aeropuerto Madrid-Barajas'),
-      act('🏨 Check-in + maletas', 'Logística', '🌆 Tarde', ALL, 'Madrid'),
+      act('🏨 Check-in + maletas', 'Logística', '☀️ Mañana', ALL, 'Madrid'),
+      act('Recorrer Madrid', 'Imperdible', '☀️ Día', ALL, 'Madrid', 'Día completo explorando'),
       act('Tinto de verano en Gran Vía', 'Relax', '🌆 Tarde', ALL, 'Madrid'),
-      act('Paseo Gran Vía', 'Relax', '🌙 Noche', ALL, 'Madrid'),
       act('Dormir temprano', 'Tip', '🌙 Noche', ALL, 'Madrid', 'Reset biológico'),
     ],
     hotel: HOTELS[0],
     optionalActivities: [],
   },
-  // June 4 - Madrid → Florence
+  // ===== 04 JUNIO - VIAJE Madrid → Florencia =====
   {
     date: '04 junio',
     dayOfWeek: 'Jueves',
@@ -156,6 +178,7 @@ export const ITINERARY: DayData[] = [
     hotel: null,
     optionalActivities: TRAVEL_OPTIONS_MADRID_FLORENCE,
   },
+  // ===== 04 JUNIO - ITALIA (Florencia llegada) =====
   {
     date: '04 junio',
     dayOfWeek: 'Jueves',
@@ -163,53 +186,50 @@ export const ITINERARY: DayData[] = [
     city: 'Florencia',
     activities: [
       act('🏨 Check-in', 'Logística', '🌆 Tarde', ALL, 'Florencia'),
-      act('Galería de la Academia', 'Cultural', '🌆 Tarde', ['Sharon', 'Carlos', 'Hayley', 'Giselle', 'Jimena'], 'Florencia'),
-      act('Museo Leonardo Da Vinci', 'Cultural', '🌆 Tarde', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'Florencia'),
-      act('Jardines de Boboli y Palazzo Pitti', 'Cultural', '🌆 Tarde', ALL, 'Florencia'),
-      act('Paseos + museos', 'Relax', '🌙 Noche', ALL, 'Florencia'),
+      act('Recorrer Florencia', 'Imperdible', '🌆 Tarde', ALL, 'Florencia', 'Paseo inicial por la ciudad'),
     ],
     hotel: HOTELS[1],
     optionalActivities: FLORENCE_OPTIONS,
   },
-  // June 5 - Florence day 1
+  // ===== 05 JUNIO - ITALIA (Venecia) =====
   {
     date: '05 junio',
     dayOfWeek: 'Viernes',
     country: 'Italia',
-    city: 'Florencia',
+    city: 'Venecia',
     activities: [
-      act('Tour de Cinque Terre', 'Imperdible', '☀️ Día', ALL, 'Florencia', 'Día completo'),
+      act('Tour a Venecia', 'Imperdible', '☀️ Día', ALL, 'Venecia', 'Día completo'),
     ],
     hotel: HOTELS[1],
     optionalActivities: FLORENCE_OPTIONS,
   },
-  // June 6 - Florence day 2
+  // ===== 06 JUNIO - ITALIA (Cinque Terre) =====
   {
     date: '06 junio',
     dayOfWeek: 'Sábado',
     country: 'Italia',
-    city: 'Florencia',
+    city: 'Cinque Terre',
     activities: [
-      act('Venecia', 'Imperdible', '☀️ Día', ALL, 'Venecia', 'Día completo'),
+      act('Tour a Cinque Terre', 'Imperdible', '☀️ Día', ALL, 'Florencia', 'Día completo'),
     ],
     hotel: HOTELS[1],
     optionalActivities: FLORENCE_OPTIONS,
   },
-  // June 7 - Florence day 3 (Birthday!)
+  // ===== 07 JUNIO - ITALIA (Toscana + Cumpleaños) =====
   {
     date: '07 junio',
     dayOfWeek: 'Domingo',
     country: 'Italia',
-    city: 'Florencia',
+    city: 'Toscana',
     activities: [
       act('🎂 Cumpleaños mamá', 'Imperdible', '☀️ Día', ALL, 'Florencia', '¡Celebración!'),
-      act('Tour por la Toscana', 'Imperdible', '☀️ Día', ALL, 'Florencia', 'San Gimignano, Monteriggioni'),
+      act('Tour privado por Toscana', 'Imperdible', '☀️ Día', ALL, 'Florencia', 'San Gimignano, Monteriggioni'),
       act('Cena bistecca', 'Imperdible', '🌙 Noche', ALL, 'Florencia', 'Cena especial'),
     ],
     hotel: HOTELS[1],
     optionalActivities: FLORENCE_OPTIONS,
   },
-  // June 8 - Florence → Zurich (TRAIN via Milan)
+  // ===== 08 JUNIO - VIAJE Florencia → Zúrich =====
   {
     date: '08 junio',
     dayOfWeek: 'Lunes',
@@ -223,44 +243,44 @@ export const ITINERARY: DayData[] = [
     hotel: null,
     optionalActivities: TRAVEL_OPTIONS_FLORENCE_ZURICH,
   },
+  // ===== 08 JUNIO - SUIZA (Zúrich llegada) =====
   {
     date: '08 junio',
     dayOfWeek: 'Lunes',
     country: 'Suiza',
     city: 'Zúrich',
     activities: [
-      act('Museo Lindt Hogar del Chocolate', 'Imperdible', '🌆 Tarde', ALL, 'Zúrich'),
       act('🏨 Llegada hotel', 'Logística', '🌙 Noche', ALL, 'Zúrich'),
+      act('Recorrer Zúrich', 'Imperdible', '🌙 Noche', ALL, 'Zúrich', 'Paseo inicial'),
     ],
     hotel: HOTELS[2],
     optionalActivities: ZURICH_OPTIONS,
   },
-  // June 9 - Zurich day 1
+  // ===== 09 JUNIO - SUIZA (Interlaken) =====
   {
     date: '09 junio',
     dayOfWeek: 'Martes',
     country: 'Suiza',
-    city: 'Zúrich',
+    city: 'Interlaken / Lauterbrunnen / Mürren',
     activities: [
-      act('Explorar ciudad', 'Relax', '☀️ Día', ALL, 'Zúrich'),
-      act('Interlaken - Lauterbrunnen - Mürren', 'Imperdible', '☀️ Día', ALL, 'Zúrich', 'Excursión montañas'),
+      act('Interlaken - Lauterbrunnen - Mürren', 'Imperdible', '☀️ Día', ALL, 'Zúrich', 'Excursión montañas - día completo'),
     ],
     hotel: HOTELS[2],
     optionalActivities: ZURICH_OPTIONS,
   },
-  // June 10 - Zurich day 2
+  // ===== 10 JUNIO - SUIZA (Swiss Travel Pass) =====
   {
     date: '10 junio',
     dayOfWeek: 'Miércoles',
     country: 'Suiza',
     city: 'Zúrich',
     activities: [
-      act('Lago / alrededores', 'Relax', '☀️ Día', ALL, 'Zúrich', 'Día opcional'),
+      act('Tour por definir - Swiss Travel Pass', 'Por definir', '☀️ Día', ALL, 'Zúrich', 'Día flexible con Swiss Travel Pass'),
     ],
     hotel: HOTELS[2],
     optionalActivities: ZURICH_OPTIONS,
   },
-  // June 11 - Zurich → Brussels (flight)
+  // ===== 11 JUNIO - VIAJE Zúrich → Bruselas =====
   {
     date: '11 junio',
     dayOfWeek: 'Jueves',
@@ -272,6 +292,7 @@ export const ITINERARY: DayData[] = [
     hotel: null,
     optionalActivities: TRAVEL_OPTIONS_ZURICH_BRUSSELS,
   },
+  // ===== 11 JUNIO - BÉLGICA (Bruselas llegada) =====
   {
     date: '11 junio',
     dayOfWeek: 'Jueves',
@@ -279,25 +300,24 @@ export const ITINERARY: DayData[] = [
     city: 'Bruselas',
     activities: [
       act('🏨 Check-in', 'Logística', '🌆 Tarde', ALL, 'Bruselas'),
-      act('Noria de Bruselas', 'Imperdible', '🌆 Tarde', ALL, 'Bruselas'),
-      act('Atomium', 'Cultural', '🌆 Tarde', ALL, 'Bruselas', 'Solo ver por fuera'),
+      act('Recorrer Bruselas', 'Imperdible', '🌆 Tarde', ALL, 'Bruselas', 'Explorar la ciudad'),
     ],
     hotel: HOTELS[3],
     optionalActivities: BRUSSELS_OPTIONS,
   },
-  // June 12 - Bruges day trip
+  // ===== 12 JUNIO - BÉLGICA (Brujas) =====
   {
     date: '12 junio',
     dayOfWeek: 'Viernes',
     country: 'Bélgica',
-    city: 'Bruselas / Brujas',
+    city: 'Brujas',
     activities: [
-      act('🚆 Excursión Brujas', 'Imperdible', '☀️ Día', ALL, 'Brujas', '🍫 Día completo'),
+      act('Tour a Brujas', 'Imperdible', '☀️ Día', ALL, 'Brujas', '🍫 Día completo'),
     ],
     hotel: HOTELS[3],
     optionalActivities: BRUGES_OPTIONS,
   },
-  // June 13 - Brussels → Paris (TRAIN)
+  // ===== 13 JUNIO - VIAJE Bruselas → París =====
   {
     date: '13 junio',
     dayOfWeek: 'Sábado',
@@ -309,6 +329,7 @@ export const ITINERARY: DayData[] = [
     hotel: null,
     optionalActivities: TRAVEL_OPTIONS_BRUSSELS_PARIS,
   },
+  // ===== 13 JUNIO - FRANCIA (París llegada) =====
   {
     date: '13 junio',
     dayOfWeek: 'Sábado',
@@ -316,47 +337,41 @@ export const ITINERARY: DayData[] = [
     city: 'París',
     activities: [
       act('🏨 Check-in', 'Logística', '🌆 Tarde', ALL, 'París'),
-      act('Notre Dame', 'Imperdible', '🌆 Tarde', ALL, 'París', 'Todos juntos'),
-      act('Sainte Chapelle', 'Imperdible', '🌆 Tarde', ALL, 'París', 'Está al lado de Notre Dame'),
-      act('Torre Eiffel al atardecer', 'Imperdible', '🌆 Tarde-Noche', ALL, 'París', 'Atardecer ~21:30 en junio'),
-      act('Tour por el Río Sena', 'Relax', '🌙 Noche', ALL, 'París', 'Oscurece tarde, aprovechar'),
+      act('Recorrer París', 'Imperdible', '🌆 Tarde', ALL, 'París', 'Explorar la ciudad, oscurece ~21:30'),
     ],
     hotel: HOTELS[4],
     optionalActivities: PARIS_OPTIONS,
   },
-  // June 14 - Paris day 1 (Sunday) - Disney group 1
+  // ===== 14 JUNIO - FRANCIA (Disney + Catacumbas + Louvre) =====
   {
     date: '14 junio',
     dayOfWeek: 'Domingo',
     country: 'Francia',
     city: 'París',
     activities: [
-      act('Disney', 'Imperdible', '☀️ Día completo', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París', 'Día completo en Disney'),
-      act('Palacio de Versalles', 'Imperdible', '☀️ Día', ['Sharon', 'Hayley', 'Jimena', 'Giselle'], 'París'),
-      act('Crucero por el Río Sena de noche', 'Imperdible', '🌙 Noche', ALL, 'París', 'Reunión de todos al final del día'),
+      act('Disney', 'Imperdible', '☀️ Día completo', ['Hayley', 'Jimena'], 'París', 'Día completo en Disney'),
+      act('Catacumbas de París', 'Imperdible', '☀️ Mañana', ['Carlos', 'Sharon', 'Ivania', 'Jonathan', 'Jurgen', 'Giselle'], 'París'),
+      act('Louvre', 'Imperdible', '🌙 Noche', ['Carlos', 'Sharon', 'Ivania', 'Jonathan', 'Jurgen', 'Giselle'], 'París', 'Tarde-noche antes de cerrar'),
     ],
     hotel: HOTELS[4],
     optionalActivities: PARIS_OPTIONS,
   },
-  // June 15 - Paris day 2 (Monday) - Disney group 2
+  // ===== 15 JUNIO - FRANCIA (Notre Dame + Sainte Chapelle + Sena + Torre Eiffel) =====
   {
     date: '15 junio',
     dayOfWeek: 'Lunes',
     country: 'Francia',
     city: 'París',
     activities: [
-      act('Disney', 'Imperdible', '☀️ Día completo', ['Jimena', 'Hayley'], 'París', 'Día completo en Disney'),
-      act('Catacumbas', 'Cultural', '☀️ Mañana', ['Ivania', 'Jonathan', 'Jurgen', 'Sharon', 'Carlos'], 'París'),
-      act('Musee des Arts et Métiers', 'Cultural', '🌆 Tarde', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París'),
-      act('Museum d\'histoire naturelle', 'Cultural', '🌆 Tarde', ['Ivania', 'Jonathan', 'Jurgen', 'Carlos'], 'París'),
-      act('Louvre', 'Cultural', '🌙 Noche', ['Carlos'], 'París', 'Tarde-noche antes de cerrar'),
-      act('Merci Store- souvenirs', 'Compras', 'Flexible', ALL, 'París'),
-      act('Au Singe Qui Lit- souvenirs', 'Compras', 'Flexible', ALL, 'París'),
+      act('Notre Dame', 'Imperdible', '☀️ Mañana', ALL, 'París'),
+      act('Sainte Chapelle', 'Imperdible', '☀️ Mañana', ALL, 'París'),
+      act('Tour por el Río Sena', 'Imperdible', '🌆 Tarde', ALL, 'París'),
+      act('Torre Eiffel', 'Imperdible', '🌙 Noche 9:00 pm', ALL, 'París', 'Subida a la Torre Eiffel'),
     ],
     hotel: HOTELS[4],
     optionalActivities: PARIS_OPTIONS,
   },
-  // June 16 - Paris → Spain (flight)
+  // ===== 16 JUNIO - VIAJE París → Madrid =====
   {
     date: '16 junio',
     dayOfWeek: 'Martes',
@@ -368,6 +383,7 @@ export const ITINERARY: DayData[] = [
     hotel: null,
     optionalActivities: TRAVEL_OPTIONS_PARIS_SPAIN,
   },
+  // ===== 16 JUNIO - ESPAÑA (Madrid segunda etapa) =====
   {
     date: '16 junio',
     dayOfWeek: 'Martes',
@@ -375,53 +391,49 @@ export const ITINERARY: DayData[] = [
     city: 'Madrid',
     activities: [
       act('🏨 Check-in', 'Logística', '🌆 Tarde', ALL, 'Madrid'),
-      act('Museo del Prado', 'Cultural', '🌆 Tarde', ['Sharon', 'Carlos'], 'Madrid'),
-      act('Estadio del Real Madrid', 'Cultural', '🌆 Tarde', ['Jonathan', 'Jurgen'], 'Madrid'),
-      act('Plaza Mayor', 'Relax', '🌙 Noche', ALL, 'Madrid'),
+      act('Recorrer Madrid', 'Imperdible', '🌆 Tarde', ALL, 'Madrid', 'Segunda visita a Madrid'),
     ],
     hotel: HOTELS[5],
-    optionalActivities: [],
+    optionalActivities: MADRID2_OPTIONS,
   },
-  // June 17 - Spain day 2
+  // ===== 17 JUNIO - ESPAÑA (Barcelona) =====
   {
     date: '17 junio',
     dayOfWeek: 'Miércoles',
     country: 'España',
-    city: 'Toledo / Barcelona',
+    city: 'Barcelona',
     activities: [
-      act('Toledo', 'Imperdible', '☀️ Día', ALL, 'Toledo', 'Excursión de día'),
-      act('Barcelona', 'Imperdible', '☀️ Día', ALL, 'Barcelona', 'Alternativa'),
-      act('Sagrada Familia', 'Imperdible', '☀️ Día', ['Ivania', 'Jonathan', 'Jurgen', 'Sharon', 'Carlos'], 'Barcelona'),
-      act('Estadio del Barca', 'Cultural', '☀️ Día', ['Jonathan', 'Jurgen'], 'Barcelona', 'De 2 a 4 personas'),
+      act('Tour Barcelona', 'Imperdible', '☀️ Día', ALL, 'Barcelona', 'Día completo'),
     ],
     hotel: HOTELS[5],
-    optionalActivities: SPAIN2_OPTIONS,
+    optionalActivities: BARCELONA_OPTIONS,
   },
-  // June 18 - Spain day 3
+  // ===== 18 JUNIO - ESPAÑA (Toledo + Último día) =====
   {
     date: '18 junio',
     dayOfWeek: 'Jueves',
     country: 'España',
-    city: 'Madrid',
+    city: 'Toledo / Madrid',
     activities: [
-      act('Exploración libre', 'Relax', '☀️ Día', ALL, 'Madrid'),
+      act('Tour Toledo', 'Imperdible', '☀️ Día', ALL, 'Toledo', 'Excursión de día'),
+      act('Último día libre / Compras / Despedida', 'Relax', '🌙 Noche', ALL, 'Madrid', 'Paseos y despedida'),
     ],
     hotel: HOTELS[5],
-    optionalActivities: SPAIN2_OPTIONS,
+    optionalActivities: TOLEDO_OPTIONS,
   },
-  // June 19 - Spain day 4
+  // ===== 19 JUNIO - ESPAÑA (Día flexible) =====
   {
     date: '19 junio',
     dayOfWeek: 'Viernes',
     country: 'España',
     city: 'Madrid',
     activities: [
-      act('Último día libre', 'Relax', '☀️ Día', ALL, 'Madrid', 'Compras, paseos, despedida'),
+      act('Día flexible', 'Por definir', '☀️ Día', ALL, 'Madrid', 'Por definir'),
     ],
     hotel: HOTELS[5],
-    optionalActivities: [],
+    optionalActivities: MADRID2_OPTIONS,
   },
-  // June 20 - Return
+  // ===== 20 JUNIO - REGRESO =====
   {
     date: '20 junio',
     dayOfWeek: 'Sábado',
